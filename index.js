@@ -44,7 +44,7 @@ function remove(answers) {
 }
 
 function removeBranch(branch) {
-  git.branch(['-d', branch])
+  git.branch(['-D', branch])
   console.log(`[delete-branches] ${branch} deleted`)
 }
 
