@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "description": "list and delete branches",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guilhermepontes/delete-branches.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
