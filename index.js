@@ -14,8 +14,8 @@ function parse(summary) {
   const { branches, current } = summary
 
   return (branches.length === 1)
-   ? Promise.reject('[delete-branches] You have only one branch')
-   : branches.filter(b => b !== 'master' && b !== current)
+    ? Promise.reject('[delete-branches] You have only one branch')
+    : branches.filter(b => b !== 'master' && b !== current)
 }
 
 function format(branches) {
