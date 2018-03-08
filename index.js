@@ -1,3 +1,6 @@
+#!/usr/bin/env node
+'use strict';
+
 const inquirer = require('inquirer')
 const git = require('simple-git/promise')(__dirname)
 
