@@ -34,7 +34,7 @@ function remove(answers) {
   const { branches } = answers
 
   if(!branches.length) {
-    console.log('[delete-branches] No branches deleted.')
+    return console.log('[delete-branches] No branches deleted.')
   }
 
   branches.forEach(removeBranch)
