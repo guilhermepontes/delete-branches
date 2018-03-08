@@ -13,8 +13,8 @@ function validate(summary) {
 function parse(summary) {
   const { branches, current } = summary
 
-  return (branches.length === 1 && branches[0] === 'master')
-   ? Promise.reject('master cannot be deleted')
+  return (branches.length === 1)
+   ? Promise.reject('[delete-branches] You have only one branch')
    : branches.filter(b => b !== 'master' && b !== current)
 }
 
@@ -49,7 +49,7 @@ function removeBranch(branch) {
 }
 
 git
-  .branch()
+  .branchLocal()
   .then(validate)
   .then(parse)
   .then(format)
