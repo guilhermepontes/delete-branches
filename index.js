@@ -2,7 +2,7 @@
 'use strict';
 
 const inquirer = require('inquirer')
-const git = require('simple-git/promise')(__dirname)
+const git = require('simple-git/promise')()
 
 function validate(summary) {
   return (!summary.all || summary.all === 0)
