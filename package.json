@@ -1,0 +1,20 @@
+{
+  "name": "delete-branches",
+  "version": "0.0.1",
+  "description": "list and delete branches",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "git",
+    "delete-branch",
+    "branch"
+  ],
+  "author": "Guilherme Pontes <guilhermepontes@msn.com>",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^5.1.0",
+    "simple-git": "^1.92.0"
+  }
+}
