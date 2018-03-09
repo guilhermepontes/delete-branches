@@ -7,5 +7,8 @@
 #### Installation
 `npm i delete-branches -g`
 
-### Usage
+#### Usage
 `delete-branches`
+
+#### License
+MIT
