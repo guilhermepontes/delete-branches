@@ -1,6 +1,6 @@
 {
   "name": "delete-branches",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "list and delete branches",
   "main": "cli.js",
   "repository": {
