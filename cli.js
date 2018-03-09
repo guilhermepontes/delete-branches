@@ -21,9 +21,7 @@ function parse(summary) {
 }
 
 function format(branches) {
-  return branches.reduce((list, name) => (
-    list.concat({ name })
-  ), [])
+  return branches.reduce((list, name) => [...list, { name }], [])
 }
 
 function ask(choices) {
