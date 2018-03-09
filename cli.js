@@ -28,7 +28,7 @@ function ask(choices) {
   return inquirer.prompt([{
     type: 'checkbox',
     name: 'branches',
-    message: '[delete-branches] Select the branches to delete:',
+    message: '[delete-branches] Select the branches you want to delete:',
     choices,
   }])
 }
