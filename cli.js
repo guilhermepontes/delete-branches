@@ -5,9 +5,11 @@ const inquirer = require('inquirer')
 const git = require('simple-git/promise')()
 
 function validate(summary) {
-  return (!summary.all || summary.all === 0)
+  const { all, current } = summary
+
+  return (!all || all === 0)
     ? Promise.reject('[delete-branches] No branches found')
-    : { branches: summary.all, current: summary.current }
+    : { branches: all, current }
 }
 
 function parse(summary) {
