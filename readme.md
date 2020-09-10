@@ -22,5 +22,10 @@ On your `~/.aliases`:
 alias db=delete-branches
 ```
 
-#### License
+### My `branches` alias
+```
+alias branches="git for-each-ref --sort='-committerdate:relative' --format=' • %1B[0;32m %(committerdate:relative)%1B[m — %1B[1;30m%(refname:short)%1B[m' refs/heads"
+```
+
+### License
 MIT
