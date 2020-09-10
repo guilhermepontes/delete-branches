@@ -15,5 +15,12 @@ npm i delete-branches -g
 delete-branches
 ```
 
+### Use alias
+On your `~/.aliases`:
+
+```
+alias db=delete-branches
+```
+
 #### License
 MIT
