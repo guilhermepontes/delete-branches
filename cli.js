@@ -14,10 +14,17 @@ function validate(summary) {
 
 function parse(summary) {
   const { branches, current } = summary
+  const protectedBranches = ['master', 'main', current]
 
-  return branches.length === 1
-    ? Promise.reject('[delete-branches] You have only one branch')
-    : branches.filter((b) => b !== 'master' && b !== current)
+  const filteredBranches = branches.filter(
+    (branch) => !protectedBranches.includes(branch)
+  )
+
+  return filteredBranches.length < 1
+    ? Promise.reject(
+        '[delete-branches] You have no branches to delete except main/master and current branch'
+      )
+    : filteredBranches
 }
 
 function format(branches) {
