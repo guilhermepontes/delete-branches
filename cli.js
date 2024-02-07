@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-'use strict';
+'use strict'
 
 const inquirer = require('inquirer')
 const git = require('simple-git/promise')()
@@ -7,7 +7,7 @@ const git = require('simple-git/promise')()
 function validate(summary) {
   const { all, current } = summary
 
-  return (!all || all === 0)
+  return !all || all === 0
     ? Promise.reject('[delete-branches] No branches found')
     : { branches: all, current }
 }
@@ -15,9 +15,9 @@ function validate(summary) {
 function parse(summary) {
   const { branches, current } = summary
 
-  return (branches.length === 1)
+  return branches.length === 1
     ? Promise.reject('[delete-branches] You have only one branch')
-    : branches.filter(b => b !== 'master' && b !== current)
+    : branches.filter((b) => b !== 'master' && b !== current)
 }
 
 function format(branches) {
@@ -25,18 +25,20 @@ function format(branches) {
 }
 
 function ask(choices) {
-  return inquirer.prompt([{
-    type: 'checkbox',
-    name: 'branches',
-    message: '[delete-branches] Select the branches you want to delete:',
-    choices,
-  }])
+  return inquirer.prompt([
+    {
+      type: 'checkbox',
+      name: 'branches',
+      message: '[delete-branches] Select the branches you want to delete:',
+      choices,
+    },
+  ])
 }
 
 function remove(answers) {
   const { branches } = answers
 
-  if(!branches.length) {
+  if (!branches.length) {
     return console.log('[delete-branches] No branches deleted')
   }
 
