@@ -22,6 +22,6 @@
   "license": "MIT",
   "dependencies": {
     "inquirer": "^5.1.0",
-    "simple-git": "^1.92.0"
+    "simple-git": "3.22.0"
   }
 }
