@@ -21,7 +21,7 @@
   "author": "Guilherme Pontes <guilhermepontes@msn.com>",
   "license": "MIT",
   "dependencies": {
-    "inquirer": "^5.1.0",
+    "inquirer": "^13.2.0",
     "simple-git": "3.22.0"
   }
 }
